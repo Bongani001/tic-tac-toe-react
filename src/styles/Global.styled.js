@@ -6,4 +6,8 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0px;
         box-sizing: border-box;
     }
+
+    body {
+        background-color: ${(props) => props.theme.colors.primary};
+    }
 `;
