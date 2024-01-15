@@ -1,13 +1,21 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import {
+  HeaderWrapper,
+  LightModeIcon,
+  DarkModeIcon,
+} from "../../styles/Header.styled";
+import Logo from "../../assets/svgs/tic-tac-toe.svg?react";
 
 const Header = () => {
-  const { toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <div>
-      <h1>Login</h1>
-      <button onClick={toggleTheme}>Toggle Theme</button>
-    </div>
+    <HeaderWrapper>
+      <Logo className="logo" />
+      <span onClick={toggleTheme}>
+        {theme === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+      </span>
+    </HeaderWrapper>
   );
 };
 

@@ -1,13 +1,12 @@
 import React from "react";
 import { Container } from "./Home.styled";
-import { Title } from "../../styles/General.styled";
-import Header from "../../components/header/Header";
+import { Subtitle, Title } from "../../styles/General.styled";
 
 const Home = () => {
   return (
     <Container>
-      <Header />
-        <Title>Tic-Tac-Toe</Title>
+      <Title>Tic-Tac-Toe</Title>
+      <Subtitle>Play with your friends, higher score wins!</Subtitle>
     </Container>
   );
 };
