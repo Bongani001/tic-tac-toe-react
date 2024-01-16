@@ -8,6 +8,6 @@ export const CellStyle = styled.button`
   width: 10rem;
   border: none;
   border-radius: 10px;
-  box-shadow: 5px 10px ${(props) => props.theme.colors.cream};
+  box-shadow: 5px 5px 5px ${(props) => props.theme.colors.cream};
   cursor: pointer;
 `;
