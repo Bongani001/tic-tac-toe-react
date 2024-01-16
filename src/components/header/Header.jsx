@@ -6,12 +6,15 @@ import {
   DarkModeIcon,
 } from "../../styles/Header.styled";
 import Logo from "../../assets/svgs/tic-tac-toe.svg?react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const navigate = useNavigate();
+
   return (
     <HeaderWrapper>
-      <Logo className="logo" />
+      <Logo className="logo" onClick={() => navigate("/")} />
       <span onClick={toggleTheme}>
         {theme === "light" ? <DarkModeIcon /> : <LightModeIcon />}
       </span>
