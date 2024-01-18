@@ -1,21 +1,22 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Router from "./Router";
 import { GlobalStyles } from "./styles/Global.styled";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./styles/theme";
 import { ThemeContext } from "./contexts/ThemeContext";
-import { ModalContextProvider } from "./contexts/ModalContext";
+import MusicPlayer from "./components/musicPlayer/MusicPlayer";
 
-const App = () => {
+function App() {
   const { theme } = useContext(ThemeContext);
+  const mode = theme === "light" ? lightTheme : darkTheme;
+
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <ModalContextProvider>
-        <GlobalStyles />
-        <Router />
-      </ModalContextProvider>
+    <ThemeProvider theme={mode}>
+      <GlobalStyles />
+      <Router />
+      <MusicPlayer />
     </ThemeProvider>
   );
-};
+}
 
 export default App;

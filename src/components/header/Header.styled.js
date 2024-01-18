@@ -6,23 +6,24 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+
   padding: 2rem;
 
   .logo {
-    width: 3rem;
+    height: 4rem;
     fill: ${(props) => props.theme.colors.text};
     cursor: pointer;
   }
 `;
 
 export const LightModeIcon = styled(MdOutlineLightMode)`
-  fill: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   font-size: 2rem;
   cursor: pointer;
 `;
 
 export const DarkModeIcon = styled(MdOutlineDarkMode)`
-  fill: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   font-size: 2rem;
   cursor: pointer;
 `;
